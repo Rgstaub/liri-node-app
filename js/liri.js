@@ -1,5 +1,5 @@
 
-let keys = require('./keys.js');
+//let keys = require('./keys.js');
 let request = require('request');
 
 let command = process.argv[2];
@@ -9,7 +9,7 @@ var queryUrl = ``;
 
 let checkCommand = function() {
   if (command === 'my-tweets') {
-    myTweets();
+    let twitter = require('./twitter.js')
   } else if (command === 'spotify this song') {
     spotifyThis(title);
   } else if (command === 'movie-this') {
@@ -32,7 +32,8 @@ let checkCommand = function() {
 
 let myTweets = function() {
 
-  
+  let twitter = require('./twitter.js')
+  console.log(twitter.statuses);
 
   // console.log("My Tweets:");
 
