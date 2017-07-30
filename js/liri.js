@@ -32,11 +32,25 @@ let checkCommand = function() {
 
 let myTweets = function() {
   console.log("My Tweets:");
-  let twitterUrl = ``
-  request(twitterUrl, function(error, response, body) {
-    
-  })
+
+  let error = function(err, response, body) {
+    console.log('ERROR [%s]', err);
+  };
+  var success = function (data) {
+      console.log('Data [%s]', data);
+  };    
+  var Twitter = require('twitter');
+  var twitter = new Twitter(keys.twitterKeys);
+  twitter.get('search/tweets', {q: "bobloblawatty"}, function(err, tweets, response) {
+    if(err) {
+      error(err, tweets, response);
+    };
+    for (let i = 0; i < tweets.statuses.length; i++) {
+      console.log((tweets.statuses[i].text));
+    }
+  } )
 }
+  
 
 let spotifyThis = function(song) {
 
