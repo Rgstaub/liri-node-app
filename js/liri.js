@@ -9,9 +9,9 @@ var queryUrl = ``;
 
 let checkCommand = function() {
   if (command === 'my-tweets') {
-    let twitter = require('./twitter.js')
+    let twitter = require('./twitter.js');
   } else if (command === 'spotify this song') {
-    spotifyThis(title);
+    let spotify = require('./spotify.js');;
   } else if (command === 'movie-this') {
     movieThis(title);
   } else if (command === 'do-what-it-says') {
@@ -30,42 +30,6 @@ let checkCommand = function() {
   }
 }
 
-let myTweets = function() {
 
-  let twitter = require('./twitter.js')
-  console.log(twitter.statuses);
-
-  // console.log("My Tweets:");
-
-  // let error = function(err, response, body) {
-  //   console.log('ERROR [%s]', err);
-  // };
-  // var success = function (data) {
-  //     console.log('Data [%s]', data);
-  // };    
-  // let Twitter = require('twitter');
-  // var twitter = new Twitter(keys.twitterKeys);
-  // twitter.get('search/tweets', {q: "bobloblawatty"}, function(err, tweets, response) {
-  //   if(err) {
-  //     error(err, tweets, response);
-  //   };
-  //   for (let i = 0; i < tweets.statuses.length; i++) {
-  //     console.log((tweets.statuses[i].text));
-  //   }
-  // } )
-}
-  
-
-let spotifyThis = function(song) {
-
-}
-
-let movieThis = function(movie) {
-
-}
-
-let doIt = function() {
-
-}
 
 checkCommand();

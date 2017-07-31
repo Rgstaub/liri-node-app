@@ -42,6 +42,8 @@ twitter.get('search/tweets', {q: "bobloblawatty"}, function(err, body, response)
     let retweetedFrom = "";
     if (body.statuses[i].retweeted_status) {
       retweetedFrom = body.statuses[i].retweeted_status.user.name;
+    } else {
+      retweetedFrom = "@bobloblawatty"
     }
     console.log(`
     ------------------------------------------------------------------------------------
