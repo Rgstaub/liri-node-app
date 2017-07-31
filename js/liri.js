@@ -10,7 +10,7 @@ var queryUrl = ``;
 let checkCommand = function() {
   if (command === 'my-tweets') {
     let twitter = require('./twitter.js');
-  } else if (command === 'spotify this song') {
+  } else if (command === 'spotify-this-song') {
     let spotify = require('./spotify.js');;
   } else if (command === 'movie-this') {
     movieThis(title);
