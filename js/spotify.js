@@ -19,9 +19,11 @@ spotify.search({
   query: title
 })
 .then(function(response) {
-  //console.log(response.tracks.items[0]);
+  console.log(response.tracks.items[0]);
   console.log(response.tracks.items[0].artists[0].name);
-  console.log(response.tracks.items[0].name);
+  console.log(response.tracks.items[0].album.name);
+  console.log(response.tracks.items[0].name)
+  console.log(response.tracks.items[0].external_urls.spotify);
 })
 .catch(function(err) {
   console.log(err);

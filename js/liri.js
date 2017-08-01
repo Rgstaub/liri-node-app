@@ -30,6 +30,4 @@ let checkCommand = function() {
   }
 }
 
-
-
 checkCommand();
