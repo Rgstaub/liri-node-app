@@ -1,5 +1,4 @@
 
-//let keys = require('./keys.js');
 const request = require('request');
 const command = process.argv[2];
 
