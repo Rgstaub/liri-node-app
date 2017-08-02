@@ -1,9 +1,7 @@
 
 //let keys = require('./keys.js');
-let request = require('request');
-
-let command = process.argv[2];
-let title = process.argv[3];
+const request = require('request');
+const command = process.argv[2];
 
 var queryUrl = ``;
 
