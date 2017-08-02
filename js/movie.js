@@ -1,17 +1,21 @@
-var omdb = require('omdb');
+let omdb = require('omdb');
+let title = "Star Wars";
+console.log(omdb);
+// let omdb = new Omdb ({
+//     'title': title,
 
-omdb.search('star wars', function(err, movies) {
-    console.log(movies)
+// })
+
+
+omdb.get({title: "Star Wars"}, function(err, movie) {
+    console.log(err);
     if(err) {
-        return console.error(err);
+        return console.log(err);
     }
  
-    if(movies.length < 1) {
-        return console.log('No movies were found!');
-    }
- 
-    movies.forEach(function(movie) {
-        console.log('%s (%d)', movie.title, movie.year);
-    });
+    // if(movie.length < 1) {
+    //     return console.log('No movies were found!');
+    // }
+
  
 });
