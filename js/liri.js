@@ -11,9 +11,9 @@ let checkCommand = function() {
   if (command === 'my-tweets') {
     let twitter = require('./twitter.js');
   } else if (command === 'spotify-this-song') {
-    let spotify = require('./spotify.js');;
+    let spotify = require('./spotify.js');
   } else if (command === 'movie-this') {
-    movieThis(title);
+    let movies = require('./movie.js');
   } else if (command === 'do-what-it-says') {
     doIt();
   } else {
