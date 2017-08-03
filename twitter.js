@@ -1,7 +1,5 @@
 let Twitter = require('twitter');
-//let exports = module.exports = {};
 let keys = require('./keys.js');
-
 
 let error = function(err, response, body) {
   console.log('ERROR [%s]', err);
@@ -19,7 +17,7 @@ twitter.get('search/tweets', {q: "bobloblawatty"}, function(err, body, response)
                             ░░▀▄▀▄▀▄░░░░░░░░░░░░░░▄▀▄▀▄▀▄▀▄▀░░▄▄
                             ░░░░▀▄▀▄▀▄░░░░░░░░░░▄▀▄▀▄▀▄▀▄▀▄▀▄▀░░
                             ░░░░▀▄▀▄▀▄▀▄▀▄░░░░░░▄▀▄▀▄▀▄▀▄▀▄▀▄▀░░
-                            ░░▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▄▀▄▀▄▀▄▀▄▀▄▀▄▀░░
+                            ░░▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀░░
                             ░░░░▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▄▀▄▀▄▀▄▀▄▀▄▀▄▀░░
                             ░░░░░░▀▄▀▄▀▄▀▄▀▄▀▄▀▄▄▀▄▀▄▀▄▀▄▀▄▀░░░░
                             ░░░░▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▄▀▄▀▄▀▄▀▄▀▄▀░░░░

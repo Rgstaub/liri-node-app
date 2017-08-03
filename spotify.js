@@ -3,7 +3,7 @@ var keys = require('./keys.js');
 let title = '';
 if (process.argv[3]) {
   for (let i = 3; i < process.argv.length; i++) {
-    title = title + ` ${process.argv[i]}`;
+    title += ` ${process.argv[i]}`;
   }
 } else {
   title = 'the sign ace of base';

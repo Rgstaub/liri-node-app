@@ -12,7 +12,7 @@ let checkCommand = function() {
   } else if (command === 'movie-this') {
     let movies = require('./movie.js');
   } else if (command === 'do-what-it-says') {
-    doIt();
+    let diIt = require('./doIt.js');
   } else {
     console.log(`
   **********************************************
