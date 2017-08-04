@@ -54,7 +54,7 @@ function spotifySearch(song) {
       Album: ${response.tracks.items[0].album.name}
       Song Title: ${response.tracks.items[0].name}
       Listen: ${response.tracks.items[0].external_urls.spotify}
-      
+
 ♪♫•*¨*•.¸¸♫♪♪♫•*¨*•.¸¸♫♪♪♫•*¨*•.¸¸♫♪♪♫•*¨*•.¸¸♫♪♪♫•*¨*•.¸¸♫♪♪♫•*¨*•.¸¸♫♪♪♫•*¨`);
     }
   })
@@ -83,5 +83,13 @@ function spotifyInquire() {
 if (!process.argv[2]) {
   spotifyInquire();
 } else {
+        console.log(`
+  ░░░░░░░░░░░░░░░░▄░█▀▀▀▀▀█▀█▀█▀▀▀█▀█▀▀▀█░▄░░░░░░░░░░░░░░░░
+  ░░░░░░░░░░░░▄░█░█░█░█▀█░█░█░█▄░▀█░█░███░█░█░▄░░░░░░░░░░░░
+  ░░░░░░░░▄░█░█░█░█░█▄█▄█▄█▄▄▄█▄▄▄█▄█▄▄▄█░█░█░█░█░▄░░░░░░░░
+  | ▌▌| ▌▌▌| ▌▌| ▌▌▌| ▌▌| ▌▌▌| ▌▌| ▌▌▌| ▌▌| ▌▌▌| ▌▌| ▌▌| ▌
+  |̲ ̲|̲ ̲|̲ ̲|̲ ̲|̲ ̲|̲ ̲|̲ ̲|̲ ̲|̲ ̲|̲ ̲|̲ ̲|̲ ̲|̲ ̲|̲ ̲|̲ ̲|̲ ̲|̲ ̲|̲ ̲|̲ ̲|̲ ̲|̲ ̲|̲ ̲|̲ ̲|̲ ̲|̲ ̲|̲ ̲|̲ ̲|̲ ̲|
+  
+  `)
   spotifySearch(title);
 };

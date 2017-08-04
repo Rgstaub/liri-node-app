@@ -19,6 +19,14 @@ function inquire() {
       if (data.command === 'See my last ten Tweets') {
       let twitter = require('./twitter.js');
     } else if (data.command === 'Look up a song') {
+      console.log(`
+  ░░░░░░░░░░░░░░░░▄░█▀▀▀▀▀█▀█▀█▀▀▀█▀█▀▀▀█░▄░░░░░░░░░░░░░░░░
+  ░░░░░░░░░░░░▄░█░█░█░█▀█░█░█░█▄░▀█░█░███░█░█░▄░░░░░░░░░░░░
+  ░░░░░░░░▄░█░█░█░█░█▄█▄█▄█▄▄▄█▄▄▄█▄█▄▄▄█░█░█░█░█░▄░░░░░░░░
+  | ▌▌| ▌▌▌| ▌▌| ▌▌▌| ▌▌| ▌▌▌| ▌▌| ▌▌▌| ▌▌| ▌▌▌| ▌▌| ▌▌| ▌
+  |̲ ̲|̲ ̲|̲ ̲|̲ ̲|̲ ̲|̲ ̲|̲ ̲|̲ ̲|̲ ̲|̲ ̲|̲ ̲|̲ ̲|̲ ̲|̲ ̲|̲ ̲|̲ ̲|̲ ̲|̲ ̲|̲ ̲|̲ ̲|̲ ̲|̲ ̲|̲ ̲|̲ ̲|̲ ̲|̲ ̲|̲ ̲|̲ ̲|
+
+  `)
       let spotify = require('./spotify.js');
     } else if (data.command === 'Look up a movie') {
       let movies = require('./movie.js');
@@ -27,7 +35,6 @@ function inquire() {
     }
   })
 }
-
 
 let checkCommand = function() {
   if (command === 'my-tweets') {
