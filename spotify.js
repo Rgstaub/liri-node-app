@@ -9,13 +9,15 @@ function spotify(song) {
     query: song
   })
   .then((response) => {
+    console.log(response)
     console.log(response.tracks.items[0].artists[0].name);
     console.log(response.tracks.items[0].album.name);
     console.log(response.tracks.items[0].name)
     console.log(response.tracks.items[0].external_urls.spotify);
   })
   .catch((err) => {
-    console.log(err);
+    console.log('Song not found. Please try again');
+    spotifyInquire();
   });
 }
 
@@ -41,10 +43,20 @@ function spotifySearch(song) {
     query: song
   })
   .then((response) => {
-    console.log(`Artist: ${response.tracks.items[0].artists[0].name}`);
-    console.log(`Album: ${response.tracks.items[0].album.name}`);
-    console.log(`Song Title: ${response.tracks.items[0].name}`)
-    console.log(`Listen: ${response.tracks.items[0].external_urls.spotify}`);
+    if (response.tracks.total === 0) {
+      console.log("*** No Song Found. Please Try again ***");
+      spotifyInquire();
+    } else {
+      console.log(`
+♪♫•*¨*•.¸¸♫♪♪♫•*¨*•.¸¸♫♪♪♫•*¨*•.¸¸♫♪♪♫•*¨*•.¸¸♫♪♪♫•*¨*•.¸¸♫♪♪♫•*¨*•.¸¸♫♪♪♫•*¨
+
+      Artist: ${response.tracks.items[0].artists[0].name}
+      Album: ${response.tracks.items[0].album.name}
+      Song Title: ${response.tracks.items[0].name}
+      Listen: ${response.tracks.items[0].external_urls.spotify}
+      
+♪♫•*¨*•.¸¸♫♪♪♫•*¨*•.¸¸♫♪♪♫•*¨*•.¸¸♫♪♪♫•*¨*•.¸¸♫♪♪♫•*¨*•.¸¸♫♪♪♫•*¨*•.¸¸♫♪♪♫•*¨`);
+    }
   })
   .catch((err) => {
     console.log(err);
@@ -60,7 +72,11 @@ function spotifyInquire() {
     }
   ])
   .then( (data) => {
-    spotifySearch(data.song)
+    if (data.song) {
+      spotifySearch(data.song);
+    } else {
+      spotifySearch(title);
+    }
   })
 }
 
